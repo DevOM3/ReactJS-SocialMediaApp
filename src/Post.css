@@ -1,0 +1,201 @@
+.post {
+    width: 100%;
+    margin-top: 21px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.75);
+}
+
+.post__top {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 15px;
+}
+
+.post__avatar {
+    margin-right: 10px;
+}
+
+.post__topInfo > h3 {
+    font-size: medium;
+}
+
+.post__topInfo > p{
+    font-size: small;
+    color: gray;
+}
+
+.post__bottom {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 15px 25px;
+}
+
+.post__image {
+    text-align: center;
+}
+
+.post__image > img {
+    width: 100%;
+}
+
+.post__options {
+    padding-top: 10px;
+    border-top: 1px solid lightgray;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: medium;
+    color: gray;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.post__option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    flex: 1;
+}
+
+.post__option > p{
+    margin-left: 10px;
+}
+
+.post__option:hover {
+    background-color: #eff2f5;
+    border-radius: 10px;
+}
+
+.post__option__private {
+    flex: .21;
+}
+
+.like__button {
+    transition: transform 100ms ease-in-out;
+}
+
+.like__button:active{
+    transform: scale(1.11);
+}
+
+
+.edit__form {
+    flex: 1;
+    display: flex;
+    height: 51px;
+}
+
+.edit__form > input {
+    outline-width: 0;
+    border: none;
+    padding: 5px 20px;
+    margin: 0 10px;
+    border-radius: 999px;
+    background-color: #eff2f5;
+}
+
+.edit__form > button {
+    display: none;
+}
+
+.messageSender__input {
+    flex: 1;
+}
+
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+  }
+  
+  /* Show the snackbar when clicking on a button (class added with JavaScript) */
+  #snackbar.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  /* Animations to fade the snackbar in and out */
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+
+@media(min-width: 1500px) {
+    .post{
+        transition: transform 100ms ease-in;
+    }
+    .post:hover {
+        transform: scale(1.05);
+    }
+}
+
+@media(max-width: 620px) {
+    .post__option__private {
+        flex: .30;
+    }
+}
+
+@media(max-width: 480px) {
+    .post__option__private {
+        flex: .40;
+    }
+}
+
+@media(max-width: 400px) {
+    .post__option__private {
+        flex: .50;
+    }
+}
+
+@media(max-width: 350px) {
+    .post__option__private {
+        flex: .65;
+    }
+}
+
+@media(max-width: 305px) {
+    .post__option__private {
+        flex: .80;
+    }
+}
+
+@media (max-width: 1000px){
+    .edit__form{
+        flex-direction: column;
+        height: 111px;
+    }
+    
+    .edit__form > input{
+        margin-bottom: 5px;
+        height: 39px;
+    }
+}

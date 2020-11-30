@@ -1,0 +1,19 @@
+.login {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.login > button {
+    width: 251px;
+    background-color: orange;
+    color: #eff2f5;
+    font-weight: 800;
+    transition: transform 100ms ease-in-out;
+}
+
+.login > button:hover {
+    background-color: white;
+    color: orange;
+    transform: scale(1.11);
+}
